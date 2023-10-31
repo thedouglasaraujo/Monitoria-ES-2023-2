@@ -21,5 +21,5 @@
 
 ## :fairy: Lista de estudantes
 
--
+- [Douglas Araújo](https://github.com/thedouglasaraujo) :computer:
 -
