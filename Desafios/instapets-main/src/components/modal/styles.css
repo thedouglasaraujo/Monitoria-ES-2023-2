@@ -7,7 +7,7 @@
     align-items: center;
   }
   
-  .login-container {
+  .modal-content {
     width: 35.9375rem;
     height: 28.125rem;
     border-radius: 0.25rem;
@@ -23,7 +23,7 @@
     line-height: normal;
   }
   
-  .login-container h1 {
+  .modal-content h1 {
     text-align: center;
     font-size: 2rem;
   }
@@ -36,11 +36,11 @@
     justify-content: center;
   }
   
-  input {
+  input[type='text'] {
     background: none;
     border: none;
     border-bottom: 1px solid #4D4D4D;
-    width: 60%;
+    width: 13.438rem;
     padding: 1.31rem 0 0.8rem 0.62rem;
     box-sizing: border-box;
     margin: 0.75rem 0;
@@ -51,11 +51,11 @@
     }
   }
   
-  input[type='submit']{
-    width: 60%;
+  button[type='submit']{
+    width: 9.063rem;
     height: 3.125rem;
     border-radius: 0.3125rem;
-    background: #6272A4;
+    background: #44475A;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin-top: 1.25rem;
     margin-bottom: 2.56rem;
