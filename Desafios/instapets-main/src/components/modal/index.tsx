@@ -7,14 +7,24 @@ interface NewPostModalProps {
 
 function NewPostModal({ onClose }: NewPostModalProps) {
   const [caption, setCaption] = useState<string>("");
-  const [image, setImage] = useState<string>("");
+  const [image, setImage] = useState<string | ArrayBuffer | null>(null);
 
   const handleChangeCaption = (e: ChangeEvent<HTMLInputElement>) => {
     setCaption(e.target.value);
   };
 
   const handleChangeImage = (e: ChangeEvent<HTMLInputElement>) => {
-    setImage(e.target.value);
+    const file = e.target.files?.[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setImage(null);
+    }
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -30,7 +40,7 @@ function NewPostModal({ onClose }: NewPostModalProps) {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <h2>Novo Post</h2>
+        <h2>Novo post</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -39,12 +49,22 @@ function NewPostModal({ onClose }: NewPostModalProps) {
             value={caption}
             onChange={handleChangeCaption}
           />
-          <input
-            type="file"
-            id="image"
-            value={image}
-            onChange={handleChangeImage}
-          />
+          <label className="file-input-label" htmlFor="image">
+            <div className="custom-file-input">
+              Upload Image
+            </div>
+            <input
+              type="file"
+              id="image"
+              onChange={handleChangeImage}
+              style={{ display: 'none' }}
+            />
+          </label>
+          {image && (
+            <div className="image-preview">
+              <img src={image as string} alt="Prévia da Imagem" />
+            </div>
+          )}
           <button type="submit">Publicar</button>
         </form>
       </div>
