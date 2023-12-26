@@ -1,0 +1,34 @@
+.new-post {
+    width: 80vw;
+    min-height: 70vh;
+    background: #282A36;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .modal {
+    margin-top: 25px;
+  }
+  
+  .add-post-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 238px;
+    height: 50px;
+    color: #6272A4;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .add-post-button span {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  

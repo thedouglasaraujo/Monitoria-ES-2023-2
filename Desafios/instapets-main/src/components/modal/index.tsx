@@ -1,5 +1,6 @@
-import "./styles.css";
 import { ChangeEvent, FormEvent, useState } from "react";
+import AddPhotoAlternateOutlinedIcon from '@material-ui/icons/AddPhotoAlternateOutlined';
+import "./styles.css";
 
 interface NewPostModalProps {
   onClose?: () => void;
@@ -29,15 +30,17 @@ function NewPostModal({ onClose }: NewPostModalProps) {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (onClose) {
-      onClose();
-    }
+    onClose?.();
+  };
+
+  const handleClose = () => {
+    onClose?.();
   };
 
   return (
     <div className="modal">
       <div className="modal-content">
-        <span className="close" onClick={onClose}>
+        <span className="close" onClick={handleClose}>
           &times;
         </span>
         <h2>Novo post</h2>
@@ -50,14 +53,12 @@ function NewPostModal({ onClose }: NewPostModalProps) {
             onChange={handleChangeCaption}
           />
           <label className="file-input-label" htmlFor="image">
-            <div className="custom-file-input">
-              Upload Image
-            </div>
+            <div className="custom-file-input"><span><AddPhotoAlternateOutlinedIcon/></span>Upload Image</div>
             <input
               type="file"
               id="image"
               onChange={handleChangeImage}
-              style={{ display: 'none' }}
+              style={{ display: "none" }}
             />
           </label>
           {image && (

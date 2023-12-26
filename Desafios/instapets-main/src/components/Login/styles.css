@@ -36,7 +36,7 @@ form  {
   justify-content: center;
 }
 
-input {
+#login, #password {
   background: none;
   border: none;
   border-bottom: 1px solid #4D4D4D;

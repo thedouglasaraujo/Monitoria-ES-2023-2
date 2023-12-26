@@ -1,6 +1,6 @@
-import "./styles.css";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { NavLink } from "react-router-dom";
+import "./styles.css";
 
 interface LoginProps {
   loginType: "login" | "signup" | undefined;
