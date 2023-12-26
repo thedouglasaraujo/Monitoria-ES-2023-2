@@ -33,18 +33,18 @@ function Login({ loginType }: LoginProps) {
         <input
           type="text"
           id="username"
-          placeholder="Username"
+          placeholder="Login"
           value={username}
           onChange={handleChangeUsername}
         />
         <input
           type="password"
           id="password"
-          placeholder="Password"
+          placeholder="Senha"
           value={password}
           onChange={handleChangePassword}
         />
-        <button type="submit">{loginType === "login" ? "Entrar" : "Criar conta"}</button>
+        <button id="submit-button" type="submit">{loginType === "login" ? "Entrar" : "Criar conta"}</button>
         <NavLink to={loginType === "login" ? "/signup" : "/login"}>
           {loginType === "login" ? "Criar conta" : "Já tenho conta"}
         </NavLink>
