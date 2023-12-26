@@ -3,7 +3,7 @@ import AddPhotoAlternateOutlinedIcon from '@material-ui/icons/AddPhotoAlternateO
 import "./styles.css";
 
 interface NewPostModalProps {
-  onClose?: () => void;
+  onClose?: (postData: { caption: string; image: string | ArrayBuffer | null }) => void;
 }
 
 function NewPostModal({ onClose }: NewPostModalProps) {
@@ -30,11 +30,11 @@ function NewPostModal({ onClose }: NewPostModalProps) {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onClose?.();
+    onClose?.({ caption, image });
   };
 
   const handleClose = () => {
-    onClose?.();
+    onClose?.({ caption, image });
   };
 
   return (
@@ -53,7 +53,9 @@ function NewPostModal({ onClose }: NewPostModalProps) {
             onChange={handleChangeCaption}
           />
           <label className="file-input-label" htmlFor="image">
-            <div className="custom-file-input"><span><AddPhotoAlternateOutlinedIcon/></span>Upload Image</div>
+            <div className="custom-file-input">
+              <span><AddPhotoAlternateOutlinedIcon /></span>Upload Image
+            </div>
             <input
               type="file"
               id="image"

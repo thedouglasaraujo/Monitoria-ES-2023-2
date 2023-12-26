@@ -1,14 +1,22 @@
+import React from "react";
+import "./styles.css";
 
 interface PostProps {
-  caption: string;
+  postData: { caption: string; image: string | ArrayBuffer | null };
 }
 
-function Post({ caption }: PostProps) {
+const Post: React.FC<PostProps> = ({ postData }) => {
   return (
-    <div className="post-container">
-      {caption}
+    <div className="post">
+      {postData.image && (
+        <div className="image-preview">
+          <img src={postData.image} alt="Prévia da Imagem" />
+        </div>
+      )}
+      <p><strong>@user.name</strong> {postData.caption}</p>
+      <p className="time-post">1min</p>
     </div>
   );
-}
+};
 
 export default Post;

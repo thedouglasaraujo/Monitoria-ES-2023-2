@@ -28,7 +28,7 @@
   font-size: 2rem;
 }
 
-form  {
+form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,8 @@ form  {
   justify-content: center;
 }
 
-#login, #password {
+#login,
+#password {
   background: none;
   border: none;
   border-bottom: 1px solid #4D4D4D;
@@ -46,12 +47,13 @@ form  {
   margin: 0.75rem 0;
   font-size: 1rem;
   color: #666;
+
   &::placeholder {
     color: #666;
   }
 }
 
-input[type='submit']{
+input[type='submit'] {
   width: 60%;
   height: 3.125rem;
   border-radius: 0.3125rem;
@@ -66,6 +68,7 @@ input[type='submit']{
   color: #FFF;
   text-align: center;
   padding: 0;
+
   &:hover {
     opacity: 0.9;
   }
