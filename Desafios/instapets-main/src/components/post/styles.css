@@ -1,22 +1,26 @@
 .post {
     background-color: #FFFFFF;
     color: #000;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     line-height: normal;
-    width: 450px;
-    height: 516px;
-    border-radius: 4px;
+    width: 28.125rem;
+    height: 3.75rem;
+    border-radius: 0.25rem;
+}
+
+.post.with-image {
+    height: 32.25rem;
 }
 
 .post p {
     margin: 0;
-    margin-left: 8px;
+    margin-left: 0.5rem;
 }
 
 .post img {
-    width: 450px;
-    height: 450px;
+    width: 28.125rem;
+    height: 28.125rem;
     margin-top: 0;
 }
 
@@ -24,10 +28,9 @@
     color: #666;
     display: flex;
     justify-content: flex-end;
-    align-items: end;
-    padding-right: 10px;
-    padding-top: 12px;
-    font-size: 14px;
+    padding-right: 0.625rem;
+    padding-top: 0.75rem;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

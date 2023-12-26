@@ -39,7 +39,7 @@ function NewPostModal({ onClose }: NewPostModalProps) {
 
   return (
     <div className="modal">
-      <div className="modal-content">
+      <div className={`modal-content${image ? ' with-image' : ''}`}>
         <span className="close" onClick={handleClose}>
           &times;
         </span>

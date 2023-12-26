@@ -1,42 +1,37 @@
-#root {
-  width: 100vw;
-  min-height: 100vh;
-  background: #282A36;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .modal-content {
   width: 38rem;
-  height: 36.875rem;
+  height: 26rem;
   border-radius: 0.25rem;
   background: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #000;
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  &.with-image {
+    height: 36.875rem;
+  }
 }
 
 .close {
   color: #666666;
-  font-size: 32px;
+  font-size: 2rem;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  margin-top: 18px;
-  margin-right: 50px;
+  margin-top: 1.125rem;
+  margin-right: 3.125rem;
   cursor: pointer;
 }
 
 .modal-content h2 {
   text-align: center;
-  font-size: 32px;
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -51,39 +46,39 @@ form {
 input[type='text'] {
   background: #F5F5F5;
   border: none;
-  border-bottom: 1px solid #4D4D4D;
-  width: 215px;
+  border-bottom: 0.063rem solid #4D4D4D;
+  width: 13.438rem;
   padding: 1.31rem 0 0.8rem 0.62rem;
   box-sizing: border-box;
   margin: 0.75rem 0;
   font-size: 1rem;
-  margin-top: 50px;
+  margin-top: 3.125rem;
   color: #666;
 }
 
 .custom-file-input {
   color: white;
-  width: 215px;
-  height: 50px;
-  border-radius: 5px;
+  width: 13.438rem;
+  height: 3.125rem;
+  border-radius: 0.313rem;
   background: #6272A4;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 1.875rem;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
 }
 
 .custom-file-input span {
-  margin-left: 5px;
-  margin-right: 10px;
+  margin-left: 0.313rem;
+  margin-right: 0.625rem;
 }
 
 .image-preview img {
-  margin-top: 15px;
-  width: 218px;
-  height: 145px;
+  margin-top: 0.938rem;
+  width: 13.625rem;
+  height: 9.063rem;
 }
 
 button[type='submit'] {
@@ -91,8 +86,8 @@ button[type='submit'] {
   height: 3.125rem;
   border-radius: 0.3125rem;
   background: #44475A;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin-top: 30px;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  margin-top: 1.875rem;
   margin-bottom: 2.56rem;
   cursor: pointer;
   border: none;

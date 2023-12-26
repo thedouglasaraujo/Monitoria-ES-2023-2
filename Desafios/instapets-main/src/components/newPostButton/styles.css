@@ -9,7 +9,7 @@
 }
 
 .modal {
-  margin-top: 25px;
+  margin-top: 1.563rem;
 }
 
 .add-post-button {
@@ -17,17 +17,17 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 238px;
-  height: 50px;
+  width: 14.875rem;
+  height: 3.125rem;
   color: #6272A4;
   background-color: #FFFFFF;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 .add-post-button span {
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 0.313rem;
+  margin-left: 0.313rem;
 }

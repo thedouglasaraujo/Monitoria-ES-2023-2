@@ -6,11 +6,13 @@ interface PostProps {
 }
 
 const Post: React.FC<PostProps> = ({ postData }) => {
+  const hasImage = postData.image !== null;
+
   return (
-    <div className="post">
+    <div className={`post${hasImage ? ' with-image' : ''}`}>
       {postData.image && (
         <div className="image-preview">
-          <img src={postData.image} alt="Prévia da Imagem" />
+          <img src={String(postData.image)} alt="Prévia da Imagem" />
         </div>
       )}
       <p><strong>@user.name</strong> {postData.caption}</p>

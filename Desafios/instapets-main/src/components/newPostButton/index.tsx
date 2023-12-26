@@ -4,18 +4,23 @@ import Post from "../../components/post";
 import AddIcon from '@material-ui/icons/Add';
 import "./styles.css";
 
+interface PostData {
+    caption: string;
+    image: string | ArrayBuffer | null;
+}
+
 export default function NewPostButton() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [newPostData, setNewPostData] = useState(null);
+    const [newPostData, setNewPostData] = useState<PostData | null>(null);
 
     const handleOpenModal = () => {
         setNewPostData(null);
         setIsModalOpen(true);
     };
 
-    const handleCloseModal = (postData) => {
+    const handleCloseModal = (postData: PostData | null) => {
         setIsModalOpen(false);
-        if (postData) {
+        if (postData && (postData.image || postData.caption.trim() !== '')) {
             setNewPostData(postData);
         }
     };
@@ -29,7 +34,7 @@ export default function NewPostButton() {
                 {isModalOpen && <Modal onClose={handleCloseModal} />}
             </div>
 
-            {newPostData && (
+            {newPostData && (newPostData.image || newPostData.caption.trim() !== '') && (
                 <Post postData={newPostData} />
             )}
         </div>
