@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Modal from "../ModalCom";
-import Post from "../PostComp";
+import Modal from "../Modal";
+import Post from "../Post";
 import AddIcon from '@material-ui/icons/Add';
 import "./styles.css";
 

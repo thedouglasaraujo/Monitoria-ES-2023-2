@@ -1,4 +1,4 @@
-import NewPostButton from "../../components/NewPostButtonComp";
+import NewPostButton from "../../components/NewPostButton";
 
 export default function NewPostPage() {
   return <NewPostButton />;
