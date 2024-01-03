@@ -27,7 +27,11 @@ export default function NewPostButton() {
 
     return (
         <div className="new-post">
-            <button className="add-post-button" onClick={handleOpenModal}>
+            <button
+                className="add-post-button"
+                onClick={handleOpenModal}
+                disabled={isModalOpen}
+            >
                 Criar novo post <span><AddIcon /></span>
             </button>
             <div className="modal">
